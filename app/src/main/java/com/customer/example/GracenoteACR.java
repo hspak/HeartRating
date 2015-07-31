@@ -592,7 +592,7 @@ public class GracenoteACR extends Activity
 				lastTime = t;
 				//can remove the appendToUI. Just to debug...
 				//appendToUI(Long.toString(currSession.totalTime) + " " + Integer.toString(currSession.intBeats()) + " " + currSession.heartScore());
-				appendToUI2(currSession.toJson() + " " + event.getHeartRate());
+				appendToUI2("HR: " + Integer.toString(event.getHeartRate()));
 			}
 		}
 	};
@@ -746,7 +746,7 @@ public class GracenoteACR extends Activity
 	{		
 		if (!isListening) 
 		{
-			((Button) findViewById(R.id.btnAcr)).setText("Stop ACR");
+			((Button) findViewById(R.id.btnAcr)).setText("Don't Play Games With My Heart");
 
 			updateStatusView("ACR Version: " + GnManager.productVersion(), true);		
 											
