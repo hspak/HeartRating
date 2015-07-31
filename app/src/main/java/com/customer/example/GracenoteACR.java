@@ -81,6 +81,7 @@ public class GracenoteACR extends Activity
 	private String CurrentShow = null;
 
 	private Map<Long, Integer> heart_map = new HashMap<Long, Integer>();
+	private Long startTime = System.currentTimeMillis();
 
 	private BandClient client = null;
 	private Button btnStart;
@@ -179,11 +180,29 @@ public class GracenoteACR extends Activity
 			}			
 		}
 
+		private Long heartScore() {
+			Long heart_beats = 0L;
+			for (Map.Entry<Long, Integer> entry : heart_map.entrySet()) {
+				//key is milliseconds, heartrate is bpm
+				heart_beats += entry.getKey()/1000/3600 * entry.getValue();
+			}
+			return heart_beats;
+		}
+
 		private void mediaTransition() {
 			MatchCount = 0;
 			MatchShow = null;
 			MatchTitle = null;
 			updateResultView("RESET", true);
+			//TODO send the heart rate, show, title, duration to the server
+			// send startTime-now
+			// calc Heart stuff
+			// send show, title
+			Long now = System.currentTimeMillis();
+
+			heart_map.clear();
+			startTime = now;
+
 		}
 
 		@Override
