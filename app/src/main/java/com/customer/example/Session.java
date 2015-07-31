@@ -39,7 +39,7 @@ public class Session {
         if (totalBeats == 0) {
             return 0L;
         } else {
-            return intBeats()*60000/(totalTime) - minBpm;
+            return intBeats()*60000/(totalTime) - minBpm + 13;
         }
     }
 

@@ -113,6 +113,8 @@ public class GracenoteACR extends Activity
 	private BandClient client = null;
 	private Button btnStart;
 	private TextView txtStatus;
+	private TextView txtStatus2;
+
 
 	/**
 	 * Private classes
@@ -245,7 +247,7 @@ public class GracenoteACR extends Activity
 			// calc Heart stuff
 			// send show, title
 			Long now = System.currentTimeMillis();
-			appendToUI("The Heart Score:" + Long.toString(heartScore(now)));
+			//appendToUI("The Heart Score:" + Long.toString(heartScore(now)));
 
 			currSession.user = Username;
 			currSession.title = MatchTitle;
@@ -548,6 +550,15 @@ public class GracenoteACR extends Activity
 		});
 	}
 
+	private void appendToUI2(final String string) {
+		this.runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				txtStatus2.setText(string);
+			}
+		});
+	}
+
 	private BandAccelerometerEventListener mAccelerometerEventListener = new BandAccelerometerEventListener() {
 		@Override
 		public void onBandAccelerometerChanged(final BandAccelerometerEvent event) {
@@ -581,7 +592,7 @@ public class GracenoteACR extends Activity
 				lastTime = t;
 				//can remove the appendToUI. Just to debug...
 				//appendToUI(Long.toString(currSession.totalTime) + " " + Integer.toString(currSession.intBeats()) + " " + currSession.heartScore());
-				//appendToUI(currSession.toJson());
+				appendToUI2(currSession.toJson() + " " + event.getHeartRate());
 			}
 		}
 	};
@@ -913,6 +924,7 @@ public class GracenoteACR extends Activity
 				});
 
 				txtStatus = (TextView) findViewById(R.id.msText);
+				txtStatus2 = (TextView) findViewById(R.id.hrText);
 			}
 		});
 	}

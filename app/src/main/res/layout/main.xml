@@ -36,7 +36,13 @@
 	 </TableLayout>
 
 	<TextView
-		android:layout_width="280dp"
+		android:layout_width="182dp"
+		android:layout_height="95dp"
+		android:text="New Text"
+		android:id="@+id/hrText" />
+
+	<TextView
+		android:layout_width="191dp"
 		android:layout_height="151dp"
 		android:text="New Text"
 		android:id="@+id/msText" />
