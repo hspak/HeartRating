@@ -35,13 +35,6 @@
 
 	 </TableLayout>
 
-	<Button
-		android:layout_width="wrap_content"
-		android:layout_height="222dp"
-		android:text="New Button"
-		android:id="@+id/msButton"
-		android:layout_gravity="center_horizontal" />
-
 	<TextView
 		android:layout_width="280dp"
 		android:layout_height="151dp"
