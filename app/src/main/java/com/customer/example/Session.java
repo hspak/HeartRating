@@ -1,5 +1,8 @@
 package com.customer.example;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -11,6 +14,9 @@ public class Session {
     public Long totalTime = 0L;
     private Integer minBpm = null;
     public Double totalBeats = 0.0;
+    public String show;
+    public String title;
+    public String user;
 
     public void addHeartRange(Integer bpm, Long start, Long end) {
         if (minBpm == null) {
@@ -35,5 +41,20 @@ public class Session {
         } else {
             return intBeats()*60000/(totalTime) - minBpm;
         }
+    }
+
+    public String toJson() {
+        JSONObject json = new JSONObject();
+        try {
+            json.put("heart-score", heartScore());
+            json.put("watch-time", totalTime);
+            json.put("show", show);
+            json.put("title", title);
+            json.put("user", user);
+        } catch (JSONException e) {
+            Integer a = 1;
+        }
+        return json.toString();
+
     }
 }

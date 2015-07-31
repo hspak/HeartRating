@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.gracenote.gnsdk.GnAcrAudio;
@@ -51,6 +52,13 @@ import com.microsoft.band.sensors.BandHeartRateEvent;
 import com.microsoft.band.sensors.BandHeartRateEventListener;
 import com.microsoft.band.sensors.HeartRateConsentListener;
 import com.microsoft.band.sensors.SampleRate;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ResponseHandler;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.BasicResponseHandler;
+import org.apache.http.impl.client.DefaultHttpClient;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -232,20 +240,58 @@ public class GracenoteACR extends Activity
 		}
 
 		private void mediaTransition() {
-			MatchCount = 0;
-			MatchShow = null;
-			MatchTitle = null;
-			updateResultView("RESET", true);
-			//TODO send the heart rate, show, title, duration to the server
+
 			// send startTime-now
 			// calc Heart stuff
 			// send show, title
 			Long now = System.currentTimeMillis();
 			appendToUI("The Heart Score:" + Long.toString(heartScore(now)));
 			currSession = new Session();
+			currSession.user = Username;
+			currSession.title = MatchTitle;
+			currSession.show = MatchShow;
+
+			if (MatchTitle != null) {
+				//TODO send the heart rate, show, title, duration to the server
+				try {
+					appendToUI("POSTING: " + currSession.toJson());
+					makeRequest(currSession.toJson());
+				} catch (Exception e) {
+					String lol = "LOL";
+				}
+			}
+
 			heart_map.clear();
 			startTime = now;
 
+			MatchCount = 0;
+			MatchShow = null;
+			MatchTitle = null;
+			updateResultView("RESET", true);
+		}
+
+		private HttpResponse makeRequest(String param) throws Exception
+		{
+			String path = "";
+			//instantiates httpclient to make request
+			DefaultHttpClient httpclient = new DefaultHttpClient();
+
+			//url with the post data
+			HttpPost httpost = new HttpPost(path);
+
+			//passes the results to a string builder/entity
+			StringEntity se = new StringEntity(param);
+
+			//sets the post request as the resulting string
+			httpost.setEntity(se);
+			//sets a request header so the page receving the request
+			//will know what to do with it
+			httpost.setHeader("Accept", "application/json");
+			httpost.setHeader("Content-type", "application/json");
+
+			//Handles what is returned from the page
+			ResponseHandler responseHandler = new BasicResponseHandler();
+			return (HttpResponse) httpclient.execute(httpost, responseHandler);
 		}
 
 		@Override
@@ -533,7 +579,8 @@ public class GracenoteACR extends Activity
 				currSession.addHeartRange(event.getHeartRate(), lastTime, t);
 				lastTime = t;
 				//can remove the appendToUI. Just to debug...
-				appendToUI(Long.toString(currSession.totalTime) + " " + Integer.toString(currSession.intBeats()) + " " + currSession.heartScore());
+				//appendToUI(Long.toString(currSession.totalTime) + " " + Integer.toString(currSession.intBeats()) + " " + currSession.heartScore());
+				appendToUI(currSession.toJson());
 			}
 		}
 	};
@@ -849,6 +896,9 @@ public class GracenoteACR extends Activity
 
 		findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
+				EditText editText = (EditText) findViewById(R.id.editText2);
+				Username = editText.getText().toString();
+				currSession.user = Username;
 				setContentView(R.layout.main);
 				TextView t = (TextView) findViewById(R.id.textView);
 				t.setText(String.format("hi %s", Username));
