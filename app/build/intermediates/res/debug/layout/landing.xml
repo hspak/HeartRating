@@ -16,4 +16,4 @@
         android:layout_height="wrap_content"
         android:text="New Button"
         android:id="@+id/button" />
-</LinearLayout><!-- From: file:/Users/hpak/AndroidStudioProjects/gn-acr-android-2.3.1.36822/app/src/main/res/layout/landing.xml -->
+</LinearLayout><!-- From: file:/Users/khsu/AndroidStudioProjects/HeartRating/app/src/main/res/layout/landing.xml -->

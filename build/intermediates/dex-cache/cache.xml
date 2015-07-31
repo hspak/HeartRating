@@ -2,25 +2,25 @@
 <items version="2" >
 
     <item
-        jar="/Users/hpak/AndroidStudioProjects/gn-acr-android-2.3.1.36822/app/libs/gnsdk.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="0db56b400443a65f675963ebbe394b1e63c7b9a1">
-        <dex dex="/Users/hpak/AndroidStudioProjects/gn-acr-android-2.3.1.36822/app/build/intermediates/pre-dexed/debug/gnsdk-4b31c27c6c0be475f9317621ef08778d4cfd0351.jar" />
-    </item>
-    <item
-        jar="/Users/hpak/AndroidStudioProjects/gn-acr-android-2.3.1.36822/app/libs/microsoft-band-1.3.10622.3.jar"
+        jar="/Users/khsu/AndroidStudioProjects/HeartRating/app/libs/microsoft-band-1.3.10622.3.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="66970fb037e530fb6db86ec0ce1eba341e837cb7">
-        <dex dex="/Users/hpak/AndroidStudioProjects/gn-acr-android-2.3.1.36822/app/build/intermediates/pre-dexed/debug/microsoft-band-1.3.10622.3-eff70b034efe52e3a31ce2c012e4c27e1f4e1e6e.jar" />
+        <dex dex="/Users/khsu/AndroidStudioProjects/HeartRating/app/build/intermediates/pre-dexed/debug/microsoft-band-1.3.10622.3-c92623ba11c4eb12e3562d63ffdcc65b045a3caf.jar" />
     </item>
     <item
-        jar="/Users/hpak/AndroidStudioProjects/gn-acr-android-2.3.1.36822/app/libs/gnsdk_helpers.jar"
+        jar="/Users/khsu/AndroidStudioProjects/HeartRating/app/libs/gnsdk_helpers.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="9a13499c1d0ee4d2bc709d6ff32ae30bffdb3011">
-        <dex dex="/Users/hpak/AndroidStudioProjects/gn-acr-android-2.3.1.36822/app/build/intermediates/pre-dexed/debug/gnsdk_helpers-d583eddb7866859b67e5d490bf931b6cb57b9d0f.jar" />
+        <dex dex="/Users/khsu/AndroidStudioProjects/HeartRating/app/build/intermediates/pre-dexed/debug/gnsdk_helpers-cf53ed8eafd3853513fd81b103fd4961e4ccc5a5.jar" />
+    </item>
+    <item
+        jar="/Users/khsu/AndroidStudioProjects/HeartRating/app/libs/gnsdk.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="0db56b400443a65f675963ebbe394b1e63c7b9a1">
+        <dex dex="/Users/khsu/AndroidStudioProjects/HeartRating/app/build/intermediates/pre-dexed/debug/gnsdk-6207c13010e6aa4b3873febc47010ea9269eb4f8.jar" />
     </item>
 
 </items>

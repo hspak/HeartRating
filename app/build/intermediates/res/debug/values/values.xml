@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/hpak/AndroidStudioProjects/gn-acr-android-2.3.1.36822/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/Users/khsu/AndroidStudioProjects/HeartRating/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string-array name="acr_optimization_mode">
         <item>Optimize for default</item>

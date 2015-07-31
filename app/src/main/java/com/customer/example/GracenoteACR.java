@@ -8,6 +8,8 @@ import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Locale;
 
 import android.app.Activity;
@@ -77,6 +79,8 @@ public class GracenoteACR extends Activity
 	private String MatchShow = null;
 	private String CurrentTitle = null;
 	private String CurrentShow = null;
+
+	private Map<Long, Integer> heart_map = new HashMap<Long, Integer>();
 
 	private BandClient client = null;
 	private Button btnStart;
@@ -175,6 +179,13 @@ public class GracenoteACR extends Activity
 			}			
 		}
 
+		private void mediaTransition() {
+			MatchCount = 0;
+			MatchShow = null;
+			MatchTitle = null;
+			updateResultView("RESET", true);
+		}
+
 		@Override
 		public void resultEvent(GnResponseAcrMatch responseAcrMatch, GnAcrMatchSourceType acrMatchSourceType)
 		{
@@ -182,10 +193,7 @@ public class GracenoteACR extends Activity
 			{
 				if (responseAcrMatch.resultCount() == 0) {
 					//updateResultView("ACR: No match", false);
-					MatchCount = 0;
-					MatchShow = null;
-					MatchTitle = null;
-					updateResultView("RESET", true);
+					mediaTransition();
 				}
 				else
 				{
@@ -234,10 +242,7 @@ public class GracenoteACR extends Activity
 								MatchCount += 1;
 								updateResultView(String.format("Hit %d: %s: %s", MatchCount, MatchTitle, MatchShow), false);
                             } else {
-								MatchCount = 0;
-								MatchShow = null;
-								MatchTitle = null;
-								updateResultView("RESET", true);
+								mediaTransition();
 							}
 
 							if (MatchCount >= 3) {
@@ -454,14 +459,17 @@ public class GracenoteACR extends Activity
 			} else {
 				appendToUI(String.valueOf(consentGiven));
 			}
-		};
+		}
 	};
 
 	private BandHeartRateEventListener heartRateListener = new BandHeartRateEventListener() {
 		@Override
 		public void onBandHeartRateChanged(BandHeartRateEvent event) {
 			if (event != null) {
-				appendToUI(Integer.toString(event.getHeartRate()));
+				Long t = System.currentTimeMillis();
+				heart_map.put(t, event.getHeartRate());
+				//can remove the appendToUI. Just to debug...
+				appendToUI(Long.toString(t) + " " + Integer.toString(heart_map.get(t)));
 			}
 		}
 	};

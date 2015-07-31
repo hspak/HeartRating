@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/HeartRating.iml" filepath="$PROJECT_DIR$/HeartRating.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/gn-acr-android-2.3.1.36822.iml" filepath="$PROJECT_DIR$/gn-acr-android-2.3.1.36822.iml" />
     </modules>
   </component>
 </project>
