@@ -9,6 +9,7 @@ import java.nio.ByteBuffer;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Locale;
 
@@ -79,8 +80,8 @@ public class GracenoteACR extends Activity
 	private String MatchShow = null;
 	private String CurrentTitle = null;
 	private String CurrentShow = null;
-
-	private Map<Long, Integer> heart_map = new HashMap<Long, Integer>();
+	// LinkedHashMap guarantees iteration in the same order of insertion.
+	private Map<Long, Integer> heart_map = new LinkedHashMap<Long, Integer>();
 	private Long startTime = System.currentTimeMillis();
 
 	private BandClient client = null;
@@ -180,13 +181,36 @@ public class GracenoteACR extends Activity
 			}			
 		}
 
-		private Long heartScore() {
+		private Long heartScore(Long now) {
 			Long heart_beats = 0L;
+			Long ret_val = 0L;
+			Long last_time = null;
+			Integer last_heart = null;
+			Integer min = null;
+			Long total_time = 1L;
 			for (Map.Entry<Long, Integer> entry : heart_map.entrySet()) {
+				if (min != null) {
+					min = Math.min(min, entry.getValue());
+					total_time = now - entry.getKey();
+				}
+				else {
+					min = entry.getValue();
+				}
 				//key is milliseconds, heartrate is bpm
-				heart_beats += entry.getKey()/1000/3600 * entry.getValue();
+				if (last_time != null) {
+					heart_beats += last_heart * (entry.getKey() - last_time)/ 1000 / 3600;
+				}
+				last_time = entry.getKey();
+				last_heart = entry.getValue();
 			}
-			return heart_beats;
+			heart_beats += last_heart * (now - last_time)/ 1000 / 3600;
+
+			if (min != null) {
+				Long mean = heart_beats/total_time;
+				ret_val = mean - min;
+			}
+
+			return ret_val;
 		}
 
 		private void mediaTransition() {
@@ -199,7 +223,7 @@ public class GracenoteACR extends Activity
 			// calc Heart stuff
 			// send show, title
 			Long now = System.currentTimeMillis();
-
+			appendToUI("The Heart Score:" + Long.toString(heartScore(now)));
 			heart_map.clear();
 			startTime = now;
 
