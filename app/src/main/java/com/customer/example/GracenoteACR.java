@@ -246,7 +246,7 @@ public class GracenoteACR extends Activity
 			// send show, title
 			Long now = System.currentTimeMillis();
 			appendToUI("The Heart Score:" + Long.toString(heartScore(now)));
-			currSession = new Session();
+
 			currSession.user = Username;
 			currSession.title = MatchTitle;
 			currSession.show = MatchShow;
@@ -263,7 +263,7 @@ public class GracenoteACR extends Activity
 
 			heart_map.clear();
 			startTime = now;
-
+			currSession = new Session();
 			MatchCount = 0;
 			MatchShow = null;
 			MatchTitle = null;
@@ -272,7 +272,7 @@ public class GracenoteACR extends Activity
 
 		private HttpResponse makeRequest(String param) throws Exception
 		{
-			String path = "";
+			String path = "http://104.131.50.123/api/save";
 			//instantiates httpclient to make request
 			DefaultHttpClient httpclient = new DefaultHttpClient();
 
@@ -324,6 +324,7 @@ public class GracenoteACR extends Activity
 						
 						// Get title
 						String officialTitle = acrMatch.officialTitle().display();
+
 						
 						// Get TV airings if available
 						GnTVAiring tvAiring = acrMatch.tvAiring();
@@ -580,7 +581,7 @@ public class GracenoteACR extends Activity
 				lastTime = t;
 				//can remove the appendToUI. Just to debug...
 				//appendToUI(Long.toString(currSession.totalTime) + " " + Integer.toString(currSession.intBeats()) + " " + currSession.heartScore());
-				appendToUI(currSession.toJson());
+				//appendToUI(currSession.toJson());
 			}
 		}
 	};
