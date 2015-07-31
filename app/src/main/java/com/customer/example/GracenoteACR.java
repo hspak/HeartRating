@@ -1,5 +1,57 @@
 package com.customer.example;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+import com.gracenote.gnsdk.GnAcrAudio;
+import com.gracenote.gnsdk.GnAcrAudioFPQueryMode;
+import com.gracenote.gnsdk.GnAcrAudioSampleFormat;
+import com.gracenote.gnsdk.GnAcrMatch;
+import com.gracenote.gnsdk.GnAcrMatchIterator;
+import com.gracenote.gnsdk.GnAcrMatchSourceType;
+import com.gracenote.gnsdk.GnAcrOptimizationType;
+import com.gracenote.gnsdk.GnAcrOptions;
+import com.gracenote.gnsdk.GnAcrStatus;
+import com.gracenote.gnsdk.GnDescriptor;
+import com.gracenote.gnsdk.GnException;
+import com.gracenote.gnsdk.GnLanguage;
+import com.gracenote.gnsdk.GnLicenseInputMode;
+import com.gracenote.gnsdk.GnLocale;
+import com.gracenote.gnsdk.GnLocaleGroup;
+import com.gracenote.gnsdk.GnManager;
+import com.gracenote.gnsdk.GnMic;
+import com.gracenote.gnsdk.GnRegion;
+import com.gracenote.gnsdk.GnResponseAcrMatch;
+import com.gracenote.gnsdk.GnTVAiring;
+import com.gracenote.gnsdk.GnTVChannel;
+import com.gracenote.gnsdk.GnTitle;
+import com.gracenote.gnsdk.GnUser;
+import com.gracenote.gnsdk.GnUserStore;
+import com.gracenote.gnsdk.IGnAcrEvents;
+import com.gracenote.gnsdk.IGnBundleSource;
+import com.gracenote.gnsdk.IGnCancellable;
+import com.microsoft.band.BandClient;
+import com.microsoft.band.BandClientManager;
+import com.microsoft.band.BandException;
+import com.microsoft.band.BandIOException;
+import com.microsoft.band.BandInfo;
+import com.microsoft.band.ConnectionState;
+import com.microsoft.band.sensors.BandAccelerometerEvent;
+import com.microsoft.band.sensors.BandAccelerometerEventListener;
+import com.microsoft.band.sensors.BandHeartRateEvent;
+import com.microsoft.band.sensors.BandHeartRateEventListener;
+import com.microsoft.band.sensors.HeartRateConsentListener;
+import com.microsoft.band.sensors.SampleRate;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -8,48 +60,11 @@ import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
-import java.util.Map;
 import java.util.Locale;
+import java.util.Map;
 
-import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.os.AsyncTask;
-import android.os.Bundle;
-import android.os.Environment;
-import android.util.Log;
-import android.view.KeyEvent;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-
-import com.customer.example.R;
-import com.gracenote.gnsdk.*;
-
-import com.microsoft.band.BandClient;
-import com.microsoft.band.BandClientManager;
-import com.microsoft.band.BandException;
-import com.microsoft.band.BandInfo;
-import com.microsoft.band.BandIOException;
-import com.microsoft.band.ConnectionState;
 //import com.microsoft.band.sdk.sampleapp.streaming.R;
-import com.microsoft.band.sensors.BandAccelerometerEvent;
-import com.microsoft.band.sensors.BandAccelerometerEventListener;
-import com.microsoft.band.sensors.SampleRate;
-import com.microsoft.band.sensors.BandHeartRateEvent;
-import com.microsoft.band.sensors.BandHeartRateEventListener;
-import com.microsoft.band.sensors.HeartRateConsentListener;
-
-import android.os.Bundle;
-import android.view.View;
-import android.app.Activity;
-import android.os.AsyncTask;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.TextView;
 
 public class GracenoteACR extends Activity
 {
@@ -83,6 +98,9 @@ public class GracenoteACR extends Activity
 	// LinkedHashMap guarantees iteration in the same order of insertion.
 	private Map<Long, Integer> heart_map = new LinkedHashMap<Long, Integer>();
 	private Long startTime = System.currentTimeMillis();
+	private Long lastTime = System.currentTimeMillis();
+
+	private Session currSession = new Session();
 
 	private BandClient client = null;
 	private Button btnStart;
@@ -224,6 +242,7 @@ public class GracenoteACR extends Activity
 			// send show, title
 			Long now = System.currentTimeMillis();
 			appendToUI("The Heart Score:" + Long.toString(heartScore(now)));
+			currSession = new Session();
 			heart_map.clear();
 			startTime = now;
 
@@ -511,8 +530,10 @@ public class GracenoteACR extends Activity
 			if (event != null) {
 				Long t = System.currentTimeMillis();
 				heart_map.put(t, event.getHeartRate());
+				currSession.addHeartRange(event.getHeartRate(), lastTime, t);
+				lastTime = t;
 				//can remove the appendToUI. Just to debug...
-				appendToUI(Long.toString(t) + " " + Integer.toString(heart_map.get(t)));
+				appendToUI(Long.toString(currSession.totalTime) + " " + Integer.toString(currSession.intBeats()) + " " + currSession.heartScore());
 			}
 		}
 	};
