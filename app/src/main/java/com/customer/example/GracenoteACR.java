@@ -375,7 +375,7 @@ public class GracenoteACR extends Activity
 	@Override
 	protected void onResume() {
 		super.onResume();
-		txtStatus.setText("");
+
 	}
 
 	@Override
@@ -773,33 +773,25 @@ public class GracenoteACR extends Activity
 
 	private void createUI() 
 	{
-		setContentView(R.layout.main);
-		findViewById(R.id.btnAcr).setOnClickListener(new View.OnClickListener() {
+		setContentView(R.layout.landing);
+
+		findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
-				// Start or stop ACR
-				startOrStopListening();
+				setContentView(R.layout.main);
+				TextView t = (TextView) findViewById(R.id.textView);
+				t.setText(String.format("hi %s", Username));
+				findViewById(R.id.btnAcr).setOnClickListener(new View.OnClickListener() {
+					public void onClick(View v) {
+						// Start or stop ACR
+						startOrStopListening();
+						txtStatus.setText("");
+						new appTask().execute();
+					}
+				});
+
+				txtStatus = (TextView) findViewById(R.id.msText);
 			}
 		});
-
-        txtStatus = (TextView) findViewById(R.id.msText);
-		btnStart = (Button) findViewById(R.id.msButton);
-		btnStart.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				txtStatus.setText("");
-				new appTask().execute();
-			}
-		});
-
-		//((EditText)findViewById(R.id.editText2)).setOn
-
-		//findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
-		//	public void onClick(View v) {
-		//		setContentView(R.layout.main);
-		//		TextView t = (TextView) findViewById(R.id.textView);
-		//		t.setText(String.format("hi %s", Username)));
-		//	}
-		//});
 	}
 
 
