@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/hpak/AndroidStudioProjects/gn-acr-android-2.3.1.36822/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string-array name="acr_optimization_mode">
+        <item>Optimize for default</item>
+        <item>Optimize for accuracy</item>
+        <item>Optimize for speed</item>
+        <item>Optimize for adaptive</item>
+    </string-array>
+    <string name="app_name">Entourage</string>
+</resources>

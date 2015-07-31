@@ -1,0 +1,528 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .DS_Store
+* docs/
+* docs/GNSDK-for-Entourage-Android-Developers-Guide.pdf
+* docs/html/
+* docs/html/Content/
+* docs/html/Content/Resources/
+* docs/html/Content/Resources/Images/
+* docs/html/Content/Resources/Images/03000001.png
+* docs/html/Content/Resources/Images/03000001_521x311.png
+* docs/html/Content/Resources/Images/acr-android.png
+* docs/html/Content/Resources/Images/acr-android_360x640.png
+* docs/html/Content/Resources/Images/gdo_get_metadata_flow.jpg
+* docs/html/Content/Resources/Images/gdo_get_metadata_flow_518x223.jpg
+* docs/html/Content/Resources/Images/gnsdk_music_core_and_enriched_data.png
+* docs/html/Content/Resources/Images/icons/
+* docs/html/Content/Resources/Images/icons/HTML5_Logo_32.png
+* docs/html/Content/Resources/Images/icons/HTML5_Logo_32_38x38.png
+* docs/html/Content/Resources/Images/icons/check.gif
+* docs/html/Content/Resources/Images/icons/forbidden.gif
+* docs/html/Content/Resources/Images/icons/information.gif
+* docs/html/Content/Resources/Images/icons/pdficon_small.png
+* docs/html/Content/Resources/Images/icons/warning.gif
+* docs/html/Content/Resources/Images/mobile/
+* docs/html/Content/Resources/Images/mobile/03000002.png
+* docs/html/Content/Resources/Images/mobile/03000002_147x93.png
+* docs/html/Content/Resources/Images/mobile/03000003.png
+* docs/html/Content/Resources/Images/mobile/03000003_186x151.png
+* docs/html/Content/Resources/Images/moodgrid_example.png
+* docs/html/Content/Resources/Stylesheets/
+* docs/html/Content/Resources/Stylesheets/BookStyles.css
+* docs/html/Content/api_ref_data_model/
+* docs/html/Content/api_ref_data_model/ACRresponseObjectTypes.jpg
+* docs/html/Content/api_ref_data_model/BookStyles.css
+* docs/html/Content/api_ref_data_model/EntourageDataModels.html
+* docs/html/Content/api_ref_data_model/EntourageDataModelsFrames.html
+* docs/html/Content/api_ref_data_model/GNSDKDataModels.html
+* docs/html/Content/api_ref_data_model/GNSDKDataModelsFrames.html
+* docs/html/Content/api_ref_data_model/GnAlbum.html
+* docs/html/Content/api_ref_data_model/GnResponseAcrMatch.html
+* docs/html/Content/api_ref_data_model/GnResponseAlbums.html
+* docs/html/Content/api_ref_data_model/GnResponseContributors.html
+* docs/html/Content/api_ref_data_model/GnResponseDataMatches.html
+* docs/html/Content/api_ref_data_model/GnResponseEpgChannels.html
+* docs/html/Content/api_ref_data_model/GnResponseEpgProgram.html
+* docs/html/Content/api_ref_data_model/GnResponseEpgTvAirings.html
+* docs/html/Content/api_ref_data_model/GnResponseEpgTvProvider.html
+* docs/html/Content/api_ref_data_model/GnResponseTracks.html
+* docs/html/Content/api_ref_data_model/GnResponseTvProvider.html
+* docs/html/Content/api_ref_data_model/GnResponseVideoObjects.html
+* docs/html/Content/api_ref_data_model/GnResponseVideoProduct.html
+* docs/html/Content/api_ref_data_model/GnResponseVideoSeasons.html
+* docs/html/Content/api_ref_data_model/GnResponseVideoSeries.html
+* docs/html/Content/api_ref_data_model/GnResponseVideoWork.html
+* docs/html/Content/api_ref_data_model/GnVideoWork.html
+* docs/html/Content/api_ref_data_model/MusicDataModels.html
+* docs/html/Content/api_ref_data_model/MusicDataModelsFrames.html
+* docs/html/Content/api_ref_data_model/ResponseObjectDiagram.jpg
+* docs/html/Content/api_ref_data_model/collapseFolderIcon2.jpg
+* docs/html/Content/api_ref_data_model/expandFolderIcon2.jpg
+* docs/html/Content/api_ref_java_android/
+* docs/html/Content/api_ref_java_android/html/
+* docs/html/Content/api_ref_java_android/html/allclasses-frame.html
+* docs/html/Content/api_ref_java_android/html/allclasses-noframe.html
+* docs/html/Content/api_ref_java_android/html/com/
+* docs/html/Content/api_ref_java_android/html/com/gracenote/
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnAcr.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnAcrAudio.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnAcrAudioAlgorithm.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnAcrAudioFPQueryMode.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnAcrAudioFingerprinter.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnAcrAudioSampleFormat.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnAcrBatch.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnAcrLookupContent.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnAcrLookupSourceType.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnAcrMatch.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnAcrMatchIterable.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnAcrMatchIterator.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnAcrMatchSourceType.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnAcrMusicOptions.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnAcrOptimizationType.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnAcrOptions.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnAcrStatus.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnAcrStatusType.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnAlbum.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnAlbumIterable.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnAlbumIterator.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnArtist.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnAsset.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnAssetFetch.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnAssetIterable.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnAssetIterator.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnAudioWork.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnContent.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnContentIterable.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnContentIterator.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnContentType.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnContributor.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnContributorIterable.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnContributorIterator.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnContributorProvider.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnCredit.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnCreditIterable.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnCreditIterator.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnDataLevel.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnDataMatch.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnDataMatchIterable.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnDataMatchIterator.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnDataObject.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnDescriptor.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnDsp.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnDspFeature.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnDspFeatureQuality.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnDspFeatureType.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnEpg.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnEpgOptions.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnEpgPostalCodeCountry.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnEpgTvAiringsQuery.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnEpgTvChannelsQuery.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnError.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnException.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnExternalId.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnExternalIdIterable.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnExternalIdIterator.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnFingerprintType.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnFpLocalCustomData.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnImagePreferenceType.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnImageSize.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnLanguage.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnLicenseInputMode.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnLink.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnLinkContent.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnLinkContentType.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnLinkDataType.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnLinkOptions.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnList.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnListElement.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnListElementChildIterable.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnListElementChildIterator.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnListElementIterable.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnListElementIterator.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnListRenderFlags.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnListType.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnLocale.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnLocaleGroup.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnLocaleInfo.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnLocaleInfoIterable.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnLocaleInfoIterator.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnLog.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnLogColumns.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnLogFilters.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnLogMessageType.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnLogOptions.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnLogPackageType.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnLookupData.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnLookupFpLocal.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnLookupMode.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnManager.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnMic.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnMusicId.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnMusicIdOptions.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnName.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnNameIterable.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnNameIterator.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnObject.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnRating.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnRegion.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnRenderOptions.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnResponseAcrMatch.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnResponseAlbums.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnResponseContributors.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnResponseDataMatches.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnResponseEpgChannels.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnResponseEpgMatch.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnResponseEpgProgram.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnResponseEpgTvAirings.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnResponseEpgTvProvider.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnResponseTracks.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnResponseVideoObjects.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnResponseVideoProduct.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnResponseVideoSeasons.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnResponseVideoSeries.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnResponseVideoSuggestions.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnResponseVideoWork.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnRole.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnStatus.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnStorageSqlite.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnStoreOps.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnString.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnStringValueIterable.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnStringValueIterator.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnTVAiring.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnTVAiringIterable.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnTVAiringIterator.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnTVChannel.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnTVChannelIterable.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnTVChannelIterator.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnTVProgram.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnTVProgramIterable.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnTVProgramIterator.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnTVProvider.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnTVProviderIterable.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnTVProviderIterator.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnThreadPriority.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnTitle.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnTrack.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnTrackIterable.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnTrackIterator.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnUser.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnUserOptions.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnUserRegisterMode.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnUserStore.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideo.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoAdvert.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoChapter.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoChapterIterable.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoChapterIterator.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoCredit.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoCreditIterable.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoCreditIterator.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoDisc.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoDiscIterable.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoDiscIterator.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoExternalIdType.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoFeature.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoFeatureIterable.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoFeatureIterator.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoFilterType.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoLayer.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoLayerIterable.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoLayerIterator.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoListElementFilterType.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoOptions.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoProduct.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoProductIterable.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoProductIterator.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoSearchField.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoSearchType.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoSeason.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoSeasonIterable.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoSeasonIterator.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoSeries.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoSeriesIterable.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoSeriesIterator.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoSide.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoSideIterable.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoSideIterator.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoTOCFlag.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoWork.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoWorkIterable.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/GnVideoWorkIterator.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/IGnAcrEvents.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/IGnAudioSource.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/IGnBundleSource.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/IGnCancellable.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/IGnLogEvents.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/IGnStatusEvents.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/IGnSystemEvents.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/IGnUserStore.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/SWIGTYPE_p_gnsdk_gdo_handle_t.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/SWIGTYPE_p_gracenote__metadata__gn_gdo_providerT_gracenote__metadata__GnTVProvider_t.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/gnsdk_javaConstants.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/package-frame.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/package-summary.html
+* docs/html/Content/api_ref_java_android/html/com/gracenote/gnsdk/package-tree.html
+* docs/html/Content/api_ref_java_android/html/constant-values.html
+* docs/html/Content/api_ref_java_android/html/deprecated-list.html
+* docs/html/Content/api_ref_java_android/html/help-doc.html
+* docs/html/Content/api_ref_java_android/html/index-all.html
+* docs/html/Content/api_ref_java_android/html/index.html
+* docs/html/Content/api_ref_java_android/html/overview-tree.html
+* docs/html/Content/api_ref_java_android/html/package-list
+* docs/html/Content/api_ref_java_android/html/resources/
+* docs/html/Content/api_ref_java_android/html/resources/inherit.gif
+* docs/html/Content/api_ref_java_android/html/serialized-form.html
+* docs/html/Content/api_ref_java_android/html/stylesheet.css
+* docs/html/Content/entourage/
+* docs/html/Content/entourage/entourage_android/
+* docs/html/Content/entourage/entourage_android/a_Add Your Gracenote Client.html
+* docs/html/Content/entourage/entourage_android/a_Build and Run the Sample Application.html
+* docs/html/Content/entourage/entourage_android/a_Create the Sample Application.html
+* docs/html/Content/entourage/entourage_android/a_Getting Started with the Android.html
+* docs/html/Content/entourage/entourage_android/a_Introduction.html
+* docs/html/Content/entourage/entourage_android/a_Set Up Your Android Development.html
+* docs/html/Content/entourage/entourage_android/a_Set Up Your Device.html
+* docs/html/Content/error_codes/
+* docs/html/Content/error_codes/doxygen.css
+* docs/html/Content/error_codes/error_codes.html
+* docs/html/Content/error_codes/logo.jpg
+* docs/html/Content/oo-topics/
+* docs/html/Content/oo-topics/oo_doc_roadmaps/
+* docs/html/Content/oo-topics/oo_doc_roadmaps/OO-APIRefsDocs.html
+* docs/html/Content/oo-topics/oo_doc_roadmaps/OO-DocRoadmapOnline.html
+* docs/html/Content/oo-topics/oo_doc_roadmaps/OO-data-model.html
+* docs/html/Content/oo-topics/oo_implementing/
+* docs/html/Content/oo-topics/oo_implementing/About the Entourage SDK.html
+* docs/html/Content/oo-topics/oo_implementing/About the Implementing Applications Documentation.html
+* docs/html/Content/oo-topics/oo_implementing/Basic Application Steps.html
+* docs/html/Content/oo-topics/oo_implementing/CodingStatusResultMethods.html
+* docs/html/Content/oo-topics/oo_implementing/Configuring ACR Lookup Behavior.html
+* docs/html/Content/oo-topics/oo_implementing/ConfiguringACRObject.html
+* docs/html/Content/oo-topics/oo_implementing/Enabling and Using GNSDK Storage .html
+* docs/html/Content/oo-topics/oo_implementing/Entourage 2.0 Migration Guide.html
+* docs/html/Content/oo-topics/oo_implementing/Entourage ACR FAQ.html
+* docs/html/Content/oo-topics/oo_implementing/Fingerprinting Offline for Batch Query.html
+* docs/html/Content/oo-topics/oo_implementing/Identifying Audio.html
+* docs/html/Content/oo-topics/oo_implementing/Loading a Locale.html
+* docs/html/Content/oo-topics/oo_implementing/Managing Image Dimensions.html
+* docs/html/Content/oo-topics/oo_implementing/Retrieving External IDs.html
+* docs/html/Content/oo-topics/oo_implementing/Setting Local and Online Lookup Modes.html
+* docs/html/Content/oo-topics/oo_implementing/Setup and Initialization.html
+* docs/html/Content/oo-topics/oo_implementing/Storing Local Audio Fingerprint Data.html
+* docs/html/Content/oo-topics/oo_implementing/Using Gracenote SDK Logging.html
+* docs/html/Content/oo-topics/oo_implementing/Using Video Explore and EPG.html
+* docs/html/Content/oo-topics/oo_implementing/Using VideoID, Video Explore, and EPG.html
+* docs/html/Content/shared-topics/
+* docs/html/Content/shared-topics/concepts/
+* docs/html/Content/shared-topics/concepts/About Gracenote.html
+* docs/html/Content/shared-topics/concepts/CD TOC Recognition.html
+* docs/html/Content/shared-topics/concepts/Classical Music Metadata.html
+* docs/html/Content/shared-topics/concepts/Clean-up and Collaborative Artists.html
+* docs/html/Content/shared-topics/concepts/Embedded Gracenote Database.html
+* docs/html/Content/shared-topics/concepts/Enhanced Voice Recognition Support.html
+* docs/html/Content/shared-topics/concepts/Fingerprint-Based Recognition.html
+* docs/html/Content/shared-topics/concepts/Gracenote Data Objects GDOs.html
+* docs/html/Content/shared-topics/concepts/Gracenote Media Elements.html
+* docs/html/Content/shared-topics/concepts/Link Module Overview.html
+* docs/html/Content/shared-topics/concepts/Modules Overview.html
+* docs/html/Content/shared-topics/concepts/Mood and Tempo Sonic Attributes.html
+* docs/html/Content/shared-topics/concepts/MoodGrid Overview.html
+* docs/html/Content/shared-topics/concepts/MusicID-File Overview.html
+* docs/html/Content/shared-topics/concepts/Playlists Overview.html
+* docs/html/Content/shared-topics/concepts/Text-Based Recognition.html
+* docs/html/Content/shared-topics/concepts/Third-Party Identifiers and Preferred Partners.html
+* docs/html/Content/shared-topics/concepts/Video Module Overview.html
+* docs/html/Content/shared-topics/concepts/Video Terminology.html
+* docs/html/Content/shared-topics/concepts/VideoExplore Overview.html
+* docs/html/Content/shared-topics/concepts/VideoID Overview.html
+* docs/html/Content/shared-topics/concepts/What is Gracenote SDK.html
+* docs/html/Content/shared-topics/front_back_matter/
+* docs/html/Content/shared-topics/front_back_matter/GlossaryList.html
+* docs/html/Content/shared-topics/front_back_matter/OOHelpSystemTitlePageOnline.html
+* docs/html/Content/shared-topics/platform-topics/
+* docs/html/Content/shared-topics/platform-topics/LibrarySizesACR.html
+* docs/html/Content/shared-topics/platform-topics/Memory Usage.html
+* docs/html/Data/
+* docs/html/Data/Alias.js
+* docs/html/Data/Alias.xml
+* docs/html/Data/Breakpoints.js
+* docs/html/Data/Concepts.js
+* docs/html/Data/Filters.js
+* docs/html/Data/Glossary.js
+* docs/html/Data/Glossary_Chunk0.js
+* docs/html/Data/HelpSystem.js
+* docs/html/Data/HelpSystem.xml
+* docs/html/Data/Index.js
+* docs/html/Data/Index_Chunk0.js
+* docs/html/Data/Index_Chunk1.js
+* docs/html/Data/Language.js
+* docs/html/Data/Search.js
+* docs/html/Data/SearchPhrase_Chunk0.js
+* docs/html/Data/SearchPhrase_Chunk1.js
+* docs/html/Data/SearchPhrase_Chunk10.js
+* docs/html/Data/SearchPhrase_Chunk11.js
+* docs/html/Data/SearchPhrase_Chunk12.js
+* docs/html/Data/SearchPhrase_Chunk13.js
+* docs/html/Data/SearchPhrase_Chunk2.js
+* docs/html/Data/SearchPhrase_Chunk3.js
+* docs/html/Data/SearchPhrase_Chunk4.js
+* docs/html/Data/SearchPhrase_Chunk5.js
+* docs/html/Data/SearchPhrase_Chunk6.js
+* docs/html/Data/SearchPhrase_Chunk7.js
+* docs/html/Data/SearchPhrase_Chunk8.js
+* docs/html/Data/SearchPhrase_Chunk9.js
+* docs/html/Data/SearchStem_Chunk0.js
+* docs/html/Data/SearchStem_Chunk1.js
+* docs/html/Data/SearchStem_Chunk2.js
+* docs/html/Data/SearchStem_Chunk3.js
+* docs/html/Data/SearchTopic_Chunk0.js
+* docs/html/Data/Synonyms.js
+* docs/html/Data/Synonyms.xml
+* docs/html/Data/Toc.js
+* docs/html/Data/Toc_Chunk0.js
+* docs/html/OO-EntourageDocsAndroidHTML5.mclog
+* docs/html/Resources/
+* docs/html/Resources/Scripts/
+* docs/html/Resources/Scripts/MadCapAll.js
+* docs/html/Resources/Scripts/PIE-no-motw.htc
+* docs/html/Resources/Scripts/custom.modernizr.js
+* docs/html/Resources/Scripts/foundation.min.js
+* docs/html/Resources/Scripts/jquery.min.js
+* docs/html/Resources/Scripts/jquery.offcanvas.js
+* docs/html/Resources/Scripts/plugins.min.js
+* docs/html/Resources/Scripts/require.config.js
+* docs/html/Resources/Scripts/require.min.js
+* docs/html/Skins/
+* docs/html/Skins/Default/
+* docs/html/Skins/Default/Stylesheets/
+* docs/html/Skins/Default/Stylesheets/Components/
+* docs/html/Skins/Default/Stylesheets/Components/Mobile.css
+* docs/html/Skins/Default/Stylesheets/Components/Styles.css
+* docs/html/Skins/Default/Stylesheets/Components/Tablet.css
+* docs/html/Skins/Default/Stylesheets/DropDownClosed.gif
+* docs/html/Skins/Default/Stylesheets/DropDownOpen.gif
+* docs/html/Skins/Default/Stylesheets/Images/
+* docs/html/Skins/Default/Stylesheets/Images/Filter.png
+* docs/html/Skins/Default/Stylesheets/Images/FilterOutline.png
+* docs/html/Skins/Default/Stylesheets/Images/MCSlider_controls.png
+* docs/html/Skins/Default/Stylesheets/Images/MCSlider_loader.gif
+* docs/html/Skins/Default/Stylesheets/Images/RatingStars.png
+* docs/html/Skins/Default/Stylesheets/Images/SearchIcon.png
+* docs/html/Skins/Default/Stylesheets/Images/book-open.png
+* docs/html/Skins/Default/Stylesheets/Images/book.png
+* docs/html/Skins/Default/Stylesheets/Images/browseActive.png
+* docs/html/Skins/Default/Stylesheets/Images/browseInactive.png
+* docs/html/Skins/Default/Stylesheets/Images/close.png
+* docs/html/Skins/Default/Stylesheets/Images/collapse.png
+* docs/html/Skins/Default/Stylesheets/Images/communityActive.png
+* docs/html/Skins/Default/Stylesheets/Images/communityInactive.png
+* docs/html/Skins/Default/Stylesheets/Images/diagonal_lines.png
+* docs/html/Skins/Default/Stylesheets/Images/edit-profile.png
+* docs/html/Skins/Default/Stylesheets/Images/expand.png
+* docs/html/Skins/Default/Stylesheets/Images/glossaryActive.png
+* docs/html/Skins/Default/Stylesheets/Images/glossaryInactive.png
+* docs/html/Skins/Default/Stylesheets/Images/gn_developer_logo_0_1.png
+* docs/html/Skins/Default/Stylesheets/Images/help-control.png
+* docs/html/Skins/Default/Stylesheets/Images/highlight.png
+* docs/html/Skins/Default/Stylesheets/Images/index-collapsed.png
+* docs/html/Skins/Default/Stylesheets/Images/index-expanded.png
+* docs/html/Skins/Default/Stylesheets/Images/index.png
+* docs/html/Skins/Default/Stylesheets/Images/indexActive.png
+* docs/html/Skins/Default/Stylesheets/Images/indexInactive.png
+* docs/html/Skins/Default/Stylesheets/Images/loading-32px.gif
+* docs/html/Skins/Default/Stylesheets/Images/loading.gif
+* docs/html/Skins/Default/Stylesheets/Images/login-dialog-icon.png
+* docs/html/Skins/Default/Stylesheets/Images/login.png
+* docs/html/Skins/Default/Stylesheets/Images/logo.png
+* docs/html/Skins/Default/Stylesheets/Images/magnifying_glass.png
+* docs/html/Skins/Default/Stylesheets/Images/minus.png
+* docs/html/Skins/Default/Stylesheets/Images/navigate-next.png
+* docs/html/Skins/Default/Stylesheets/Images/navigate-previous.png
+* docs/html/Skins/Default/Stylesheets/Images/new-indicator.png
+* docs/html/Skins/Default/Stylesheets/Images/plus.png
+* docs/html/Skins/Default/Stylesheets/Images/printer.png
+* docs/html/Skins/Default/Stylesheets/Images/star-empty.png
+* docs/html/Skins/Default/Stylesheets/Images/star-full.png
+* docs/html/Skins/Default/Stylesheets/Images/tocActive.png
+* docs/html/Skins/Default/Stylesheets/Images/tocInactive.png
+* docs/html/Skins/Default/Stylesheets/Images/topic.png
+* docs/html/Skins/Default/Stylesheets/Images/transparent.gif
+* docs/html/Skins/Default/Stylesheets/Slideshow.css
+* docs/html/Skins/Default/Stylesheets/Styles.css
+* docs/html/Skins/Default/Stylesheets/TextEffects.css
+* docs/html/Skins/Default/Stylesheets/Topic.css
+* docs/html/csh.js
+* docs/html/index.html
+* docs/html/index.js
+* docs/html/index.mcwebhelp
+* docs/html/index_CSH.html
+* docs/start_here.html
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app/src/main/AndroidManifest.xml
+* libs/armeabi-v7a/libgabi++_shared.so => app/src/main/jniLibs/armeabi-v7a/libgabi++_shared.so
+* libs/armeabi-v7a/libgnsdk_acr.3.08.0.so => app/src/main/jniLibs/armeabi-v7a/libgnsdk_acr.3.08.0.so
+* libs/armeabi-v7a/libgnsdk_dsp.3.08.0.so => app/src/main/jniLibs/armeabi-v7a/libgnsdk_dsp.3.08.0.so
+* libs/armeabi-v7a/libgnsdk_epg.3.08.0.so => app/src/main/jniLibs/armeabi-v7a/libgnsdk_epg.3.08.0.so
+* libs/armeabi-v7a/libgnsdk_java_marshal.so => app/src/main/jniLibs/armeabi-v7a/libgnsdk_java_marshal.so
+* libs/armeabi-v7a/libgnsdk_link.3.08.0.so => app/src/main/jniLibs/armeabi-v7a/libgnsdk_link.3.08.0.so
+* libs/armeabi-v7a/libgnsdk_lookup_fplocal.3.08.0.so => app/src/main/jniLibs/armeabi-v7a/libgnsdk_lookup_fplocal.3.08.0.so
+* libs/armeabi-v7a/libgnsdk_manager.3.08.0.so => app/src/main/jniLibs/armeabi-v7a/libgnsdk_manager.3.08.0.so
+* libs/armeabi-v7a/libgnsdk_musicid.3.08.0.so => app/src/main/jniLibs/armeabi-v7a/libgnsdk_musicid.3.08.0.so
+* libs/armeabi-v7a/libgnsdk_storage_sqlite.3.08.0.so => app/src/main/jniLibs/armeabi-v7a/libgnsdk_storage_sqlite.3.08.0.so
+* libs/armeabi-v7a/libgnsdk_video.3.08.0.so => app/src/main/jniLibs/armeabi-v7a/libgnsdk_video.3.08.0.so
+* libs/armeabi/libgabi++_shared.so => app/src/main/jniLibs/armeabi/libgabi++_shared.so
+* libs/armeabi/libgnsdk_acr.3.08.0.so => app/src/main/jniLibs/armeabi/libgnsdk_acr.3.08.0.so
+* libs/armeabi/libgnsdk_dsp.3.08.0.so => app/src/main/jniLibs/armeabi/libgnsdk_dsp.3.08.0.so
+* libs/armeabi/libgnsdk_epg.3.08.0.so => app/src/main/jniLibs/armeabi/libgnsdk_epg.3.08.0.so
+* libs/armeabi/libgnsdk_java_marshal.so => app/src/main/jniLibs/armeabi/libgnsdk_java_marshal.so
+* libs/armeabi/libgnsdk_link.3.08.0.so => app/src/main/jniLibs/armeabi/libgnsdk_link.3.08.0.so
+* libs/armeabi/libgnsdk_lookup_fplocal.3.08.0.so => app/src/main/jniLibs/armeabi/libgnsdk_lookup_fplocal.3.08.0.so
+* libs/armeabi/libgnsdk_manager.3.08.0.so => app/src/main/jniLibs/armeabi/libgnsdk_manager.3.08.0.so
+* libs/armeabi/libgnsdk_musicid.3.08.0.so => app/src/main/jniLibs/armeabi/libgnsdk_musicid.3.08.0.so
+* libs/armeabi/libgnsdk_storage_sqlite.3.08.0.so => app/src/main/jniLibs/armeabi/libgnsdk_storage_sqlite.3.08.0.so
+* libs/armeabi/libgnsdk_video.3.08.0.so => app/src/main/jniLibs/armeabi/libgnsdk_video.3.08.0.so
+* libs/gnsdk.jar => app/libs/gnsdk.jar
+* libs/gnsdk_helpers.jar => app/libs/gnsdk_helpers.jar
+* libs/x86/libgabi++_shared.so => app/src/main/jniLibs/x86/libgabi++_shared.so
+* libs/x86/libgnsdk_acr.3.08.0.so => app/src/main/jniLibs/x86/libgnsdk_acr.3.08.0.so
+* libs/x86/libgnsdk_dsp.3.08.0.so => app/src/main/jniLibs/x86/libgnsdk_dsp.3.08.0.so
+* libs/x86/libgnsdk_epg.3.08.0.so => app/src/main/jniLibs/x86/libgnsdk_epg.3.08.0.so
+* libs/x86/libgnsdk_java_marshal.so => app/src/main/jniLibs/x86/libgnsdk_java_marshal.so
+* libs/x86/libgnsdk_link.3.08.0.so => app/src/main/jniLibs/x86/libgnsdk_link.3.08.0.so
+* libs/x86/libgnsdk_lookup_fplocal.3.08.0.so => app/src/main/jniLibs/x86/libgnsdk_lookup_fplocal.3.08.0.so
+* libs/x86/libgnsdk_manager.3.08.0.so => app/src/main/jniLibs/x86/libgnsdk_manager.3.08.0.so
+* libs/x86/libgnsdk_musicid.3.08.0.so => app/src/main/jniLibs/x86/libgnsdk_musicid.3.08.0.so
+* libs/x86/libgnsdk_storage_sqlite.3.08.0.so => app/src/main/jniLibs/x86/libgnsdk_storage_sqlite.3.08.0.so
+* libs/x86/libgnsdk_video.3.08.0.so => app/src/main/jniLibs/x86/libgnsdk_video.3.08.0.so
+* res/ => app/src/main/res/
+* src/ => app/src/main/java/
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)
